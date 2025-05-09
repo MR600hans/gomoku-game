@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { db } from '../config/firebase'
 import { collection, addDoc, query, where, getDocs } from 'firebase/firestore'
-import backgroundImage from '../assets/background.jpg'
 
 interface BoardState {
   [key: string]: 'B' | 'W' | null;
@@ -77,12 +76,9 @@ const Lobby: React.FC = () => {
 
   return (
     <div 
-      className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-      }}
+      className="min-h-screen flex items-center justify-center bg-gray-100"
     >
-      <div className="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-md w-96">
+      <div className="bg-white p-8 rounded-lg shadow-md w-96">
         <h1 className="text-3xl font-bold mb-6 text-center">寒極五子棋</h1>
         
         <div className="space-y-4">
